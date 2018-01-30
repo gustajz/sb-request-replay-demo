@@ -29,7 +29,6 @@ public class CalculatorConfig {
 				.from(CalculatorGateway.REQUEST)
 				.enrichHeaders(HeaderEnricherSpec::headerChannelsToString)
 				.channel(CalculatorChannel.OUTPUT)
-				.log()
 				.get();
 	}
 
@@ -39,7 +38,6 @@ public class CalculatorConfig {
 				.from(CalculatorChannel.INPUT)
 				.transform(Transformers.fromJson(CalculationResponse.class, mapper))
 				.channel(CalculatorGateway.REPLAY)
-				.log()
 				.get();
 	}
 
