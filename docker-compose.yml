@@ -16,7 +16,7 @@ services:
       replicas: 2
       update_config:
         parallelism: 1
-        delay: 20s
+        delay: 20s  
       restart_policy:
         condition: on-failure
 
