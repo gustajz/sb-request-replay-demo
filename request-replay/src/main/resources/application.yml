@@ -12,7 +12,7 @@ spring:
           content-type: application/json
           destination: replies
           consumer:
-            concurrency: 2          
+            concurrency: 10
         multiply-output:
           content-type: application/json
           destination: requests

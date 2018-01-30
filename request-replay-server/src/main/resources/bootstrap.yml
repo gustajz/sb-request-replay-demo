@@ -1,7 +1,7 @@
 ---
 spring:
   application:
-    name: request-replay
+    name: request-replay-server
         
 management:
   add-application-context-header: false

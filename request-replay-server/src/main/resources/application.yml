@@ -13,7 +13,7 @@ spring:
           destination: requests
           group: multiply
           consumer:
-            concurrency: 4
+            concurrency: 10
         multiply-output:
           content-type: application/json
           destination: replies
