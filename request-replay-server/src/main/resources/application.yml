@@ -19,6 +19,6 @@ spring:
           destination: replies
 
   rabbitmq:
-    host: ${RABBITMQ_URL:localhost}
+    host: ${RABBITMQ_HOST:localhost}
     username: ${RABBITMQ_USER:guest}
     password: ${RABBITMQ_PASS:guest}
