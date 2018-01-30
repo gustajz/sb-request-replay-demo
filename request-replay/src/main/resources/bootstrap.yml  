@@ -1,0 +1,12 @@
+---
+spring:
+  application:
+    name: request-replay
+        
+management:
+  add-application-context-header: false
+
+endpoints:
+  enabled: false
+  health:
+    enabled: true

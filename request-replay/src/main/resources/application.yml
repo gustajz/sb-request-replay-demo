@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+management:
+  port: 0
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        multiply-input:
+          content-type: application/json
+          destination: replies
+        multiply-output:
+          content-type: application/json
+          destination: requests
+          group: multiply
+          
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    username: ${RABBITMQ_USER:guest}
+    password: ${RABBITMQ_PASS:guest}
