@@ -11,6 +11,8 @@ spring:
         multiply-input:
           content-type: application/json
           destination: replies
+          consumer:
+            concurrency: 2          
         multiply-output:
           content-type: application/json
           destination: requests
