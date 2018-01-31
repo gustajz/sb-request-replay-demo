@@ -3,13 +3,15 @@
 #   docker stack deploy -c stack.yml demo
 # Status:
 #   docker stack services demo
+# Delete:
+#   docker stack rm demo
 #
 version: '3.1'
 
 services:
 
   app-server:
-    image: gustajz/sb-request-replay-demo:server
+    image: gustajz/sb-request-reply-demo:server
     environment:
       RABBITMQ_HOST: rabbitmq
     deploy:
@@ -21,13 +23,13 @@ services:
         condition: on-failure
 
   app-client:
-    image: gustajz/sb-request-replay-demo:client
+    image: gustajz/sb-request-reply-demo:client
     environment:
       RABBITMQ_HOST: rabbitmq
     ports:
       - 8080:8080
     deploy:
-      replicas: 4
+      replicas: 2
       update_config:
         parallelism: 1
         delay: 20s

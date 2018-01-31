@@ -1,2 +1,2 @@
-# spring-request-replay-demo
-Demo de implementação de Request/Replay utilizando Spring Cloud Stream e Spring Integration
+# spring-request-reply-demo
+Demo de implementação de Request/Reply utilizando Spring Cloud Stream e Spring Integration
