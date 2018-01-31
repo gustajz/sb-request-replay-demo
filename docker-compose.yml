@@ -21,6 +21,9 @@ services:
         delay: 20s  
       restart_policy:
         condition: on-failure
+      resources:
+        limits:
+          memory: 256M
 
   app-client:
     image: gustajz/sb-request-reply-demo:client
@@ -35,6 +38,9 @@ services:
         delay: 20s
       restart_policy:
         condition: on-failure
+      resources:
+        limits:
+          memory: 256M
 
   rabbitmq:
     image: rabbitmq:3-management
